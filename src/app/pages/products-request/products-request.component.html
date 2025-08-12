@@ -1,0 +1,80 @@
+<!-- src/app/pages/products-request/products-request.component.html -->
+<section class="request-section">
+  <div class="request-container">
+    <!-- Form Section -->
+    <div class="form-box">
+      <h2>Products On Request</h2>
+      <p>Send us your request for the product you want:</p>
+
+      <form (ngSubmit)="onSubmit()" #requestForm="ngForm" novalidate>
+        <div class="form-group">
+          <input
+            type="text"
+            name="name"
+            [(ngModel)]="formData.name"
+            placeholder="Your Name"
+            required
+            #name="ngModel"
+          />
+          <div class="error" *ngIf="name.invalid && name.touched">Name is required.</div>
+        </div>
+
+        <div class="form-group">
+          <input
+            type="text"
+            name="contact"
+            [(ngModel)]="formData.contact"
+            placeholder="Contact Number"
+            required
+            #contact="ngModel"
+          />
+          <div class="error" *ngIf="contact.invalid && contact.touched">Contact is required.</div>
+        </div>
+
+        <div class="form-group">
+          <input
+            type="email"
+            name="email"
+            [(ngModel)]="formData.email"
+            placeholder="Your Email"
+            required
+            #email="ngModel"
+          />
+          <div class="error" *ngIf="email.invalid && email.touched">Valid email is required.</div>
+        </div>
+
+        <div class="form-group">
+          <input
+            type="text"
+            name="subject"
+            [(ngModel)]="formData.subject"
+            placeholder="Subject"
+          />
+        </div>
+
+        <div class="form-group">
+          <textarea
+            name="message"
+            [(ngModel)]="formData.message"
+            placeholder="What kind of product are you looking for?"
+          ></textarea>
+        </div>
+
+        <button type="submit" [disabled]="!requestForm.form.valid">Submit Request</button>
+      </form>
+    </div>
+    <div class="products-container">
+  <h1>Products</h1>
+  <div class="grid">
+     <a *ngFor="let cat of  " [routerLink]="['/products', cat]" class="card"> 
+      <img [src]="'assets/images/' + cat + '.jpg'" alt="{{ cat }}" />
+      <h3>{{ cat | titlecase }}</h3>
+    </a>
+  </div>
+</div>
+    <!-- Image Section -->
+    <!-- <div class="image-box">
+      <img src="assets/products-request.jpg" alt="Dry Fruits Request" />
+    </div> -->
+  </div>
+</section>

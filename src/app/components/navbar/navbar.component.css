@@ -1,0 +1,141 @@
+/* Navbar Container */
+.navbar {
+  background: linear-gradient(to right, #e5ebe3, #e3dedb);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 14px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+  
+/* Inner Container */
+.container {
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Styling */
+.logo a {
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 800;
+  color: #4a2c18;
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.logo a:hover {
+  color: #a0522d;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+  transition: all 0.3s ease;
+  padding: 8px 0;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 0;
+  background: #c47f2f;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #a0522d;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger Menu Icon */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+  z-index: 1100;
+  transition: all 0.3s ease;
+}
+
+.menu-icon .bar {
+  width: 28px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animated Hamburger */
+.menu-icon.open .bar:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.menu-icon.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.menu-icon.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    background: #fff;
+    transition: left 0.4s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 30px 0;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .nav-links li a {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}

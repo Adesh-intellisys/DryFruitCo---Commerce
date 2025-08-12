@@ -1,0 +1,215 @@
+/* ===== Footer Base ===== */
+.footer {
+  background: linear-gradient(135deg, #e1d4c4, #eae4e4);
+  color: #333;
+  padding: 3rem 1rem 1rem;
+  font-family: 'Poppins', sans-serif;
+  border-top: 1px solid #eee;
+}
+
+/* ===== Newsletter Section ===== */
+.newsletter {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.newsletter h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #ff6600;
+}
+
+.newsletter p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.subscribe {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.subscribe input[type="email"] {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 300px;
+  max-width: 90%;
+  font-size: 1rem;
+}
+
+.subscribe button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background-color: #ff6600;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.subscribe button:hover {
+  background-color: #e05500;
+}
+
+/* ===== Footer Content Layout ===== */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  padding: 2rem 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ===== Left Column (Logo + About + Payments) ===== */
+.footer-left {
+  flex: 1 1 250px;
+}
+
+.footer-left .logo {
+  width: 160px;
+  margin-bottom: 1rem;
+}
+
+.footer-left p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.payments h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.payments img {
+  width: 40px;
+  margin-right: 8px;
+}
+
+/* ===== Footer Links ===== */
+.footer-links,
+.footer-contact,
+.footer-social {
+  flex: 1 1 200px;
+}
+
+.footer-links h4,
+.footer-contact h4,
+.footer-social h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #222;
+  font-weight: 600;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #ff6600;
+}
+
+/* ===== Contact Section ===== */
+.footer-contact p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.footer-contact strong {
+  color: #222;
+}
+
+/* ===== Social Icons ===== */
+.footer-social .social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer-social .social-icons img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+.footer-social .social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* ===== Bottom Footer ===== */
+.footer-bottom {
+  text-align: center;
+  padding: 1rem 0 0.5rem;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.footer-bottom span {
+  color: #ff6600;
+  font-weight: 600;
+}
+
+/* ===== Responsive Layout ===== */
+@media (max-width: 992px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .subscribe {
+    flex-direction: column;
+  }
+
+  .subscribe input[type="email"],
+  .subscribe button {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 576px) {
+  .newsletter h2 {
+    font-size: 1.5rem;
+  }
+
+  .footer-content,
+  .footer-left,
+  .footer-links,
+  .footer-contact,
+  .footer-social {
+    text-align: center;
+  }
+
+  .payments {
+    justify-content: center;
+  }
+
+  .payments img {
+    margin: 5px;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+  }
+}

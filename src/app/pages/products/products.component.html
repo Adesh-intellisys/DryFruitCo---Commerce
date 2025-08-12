@@ -1,0 +1,14 @@
+<section class="products-page">
+  <h2 class="section-title">Products</h2>
+
+  <div class="product-grid">
+    <div
+      class="product-item"
+      *ngFor="let category of categories"
+      (click)="navigateTo(category.route)"
+    >
+      <img [src]="category.image" [alt]="category.title" />
+      <h3>{{ category.title }}</h3>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,25 @@
+<!-- src/app/components/navbar/navbar.component.html -->
+<nav class="navbar">
+  <div class="container">
+    <div class="logo">
+      <a routerLink="/">Satvikk</a>
+    </div>
+
+    <div class="menu-icon" (click)="toggleMenu()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <ul class="nav-links" [ngClass]="{ 'active': isMenuOpen }">
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/products">Products</a></li>
+      <li><a routerLink="/products-request">Products On Request</a></li>
+      <li><a routerLink="/contact">Contact</a></li>
+      <li><a routerLink="/about-us">About Us </a></li>
+      <!-- <li><a routerLink="/cart">cart</a></li> -->
+      <a routerLink="/cart" class="cart-link">🛒</a>
+
+    </ul>
+  </div>
+</nav>
